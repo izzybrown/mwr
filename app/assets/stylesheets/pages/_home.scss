@@ -1,1 +1,38 @@
-// Specific CSS for your home-page
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+    padding: 30px;
+}
+
+.video-title{
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 320px;
+    padding-bottom: 5px;
+}
+
+.video-description{
+  font-size: 12px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 320px;
+}
+
+.youtube-container{
+  margin: 20px;
+}
+
+.youtube-link{
+  color: black;
+  font-size: 15px;
+}
+
+.published {
+  font-size: 12px;
+  margin-top: 5px;
+}

@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-wrapper">
+  <div class="youtube-container">
+    <div class="row">
+        <% @items.each do |item| %>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="content">
+              <p class="video-image" ><%=image_tag item['snippet']['thumbnails']['medium']['url'] %></p>
+              <h1 class="video-title"><%= item['snippet']['title'] %></h1>
+              <h2 class="video-description"><%= item['snippet']['description'] %></h2>
+              <a class="youtube-link" href="https://www.youtube.com/watch?v=<%= item['contentDetails']['upload']['videoId'] %>"=>Click for Video</a>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
