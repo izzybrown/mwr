@@ -15,9 +15,22 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'rspec-rails'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+end
+
+group :development, :test do
+  # [...]
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+  gem 'launchy'
 end
 
 group :development, :test do

@@ -7,21 +7,17 @@ class PagesController < ApplicationController
     url = open("https://www.googleapis.com/youtube/v3/activities?part=snippet,contentDetails&channelId=UCV61VqLMr2eIhH4f51PV0gA&key=#{ENV['API_KEY']}&maxResults=50").read
     json = JSON.parse(url)
 
-    #select json items that you want to display
+    #select json items, items is the JSON to iterate over
     @items = json['items']
-    @image_id = json['items'][0]['contentDetails']['upload']['videoId']
-    @description = json['items'][0]['snippet']['description']
-    @date = json['items'][0]['snippet']['publishedAt']
+    #in the home view - iterate over the items array to display information from the youtube JSON file
   end
 
   def tech
+    #get channel id for bloomberg tech and save url with channel id and API Key
     url = open("https://www.googleapis.com/youtube/v3/activities?part=snippet,contentDetails&channelId=UCrM7B7SL_g1edFOnmj-SDKg&key=#{ENV['API_KEY']}&maxResults=50").read
     json = JSON.parse(url)
-
     #select json items that you want to display
     @items = json['items']
-    @image_id = json['items'][0]['contentDetails']['upload']['videoId']
-    @description = json['items'][0]['snippet']['description']
-    @date = json['items'][0]['snippet']['publishedAt']
+
   end
 end
